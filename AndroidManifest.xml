@@ -27,6 +27,11 @@
             android:label="YouTube Menu" >
             
         </activity>
+        <activity
+            android:name=".StandaloneActivity"
+            android:label="Standalone Menu" >
+            
+        </activity>
     </application>
     
     <uses-permission android:name="android.permission.INTERNET"/>

@@ -12,6 +12,8 @@ import android.widget.Button;
 public class MainActivity extends Activity {
 	
 	Button btnPlay;
+	Button btnStandalone;
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +24,16 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(MainActivity.this, YouTubeActivity.class);
+				startActivity(intent);
+			}
+		});
+        
+        btnStandalone = (Button) findViewById(R.id.btnSubMenu);
+        btnStandalone.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(MainActivity.this, StandaloneActivity.class);
 				startActivity(intent);
 			}
 		});
